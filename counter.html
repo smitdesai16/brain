@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css" />
+	<title>Working With String</title>
+</head>
+<body>
+	<script src="node_modules\brain.js\dist\brain-browser.min.js"></script>
+	<script>
+
+		const trainingData = [
+			[1,2,3,4,5],
+			[5,4,3,2,1],
+		];
+
+		const net = new brain.recurrent.LSTMTimeStep();
+
+		net.train(trainingData);
+
+		console.log(net.run([1,2,3,4]));
+		console.log(net.run([5,4,3,2]));
+	</script>
+</body>
+</html>
